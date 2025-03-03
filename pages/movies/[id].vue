@@ -1,10 +1,9 @@
 <script setup>
 const route = useRoute()
 
-const { data } = useAsyncData(`/movies/${route.params.id}`, () => {
-  return $fetch(`https://www.omdbapi.com/?apikey=c636c52f&i=${route.params.id}`)
-}, {
+const { data } = useFetch(`https://www.omdbapi.com/?apikey=c636c52f&i=${route.params.id}`, {
   pick: ["Plot", "Title"],
+  key: `/movies/${route.params.id}`
 }) 
 </script>
 
