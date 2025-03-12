@@ -2,14 +2,11 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
-  modules: [
-    [
-      "@pinia/nuxt", {
-        autoImports: ["defineStore", "acceptHMRUpdate"]
-      }
-    ],
-    "@nuxt/image"
-  ],
+  modules: [[
+    "@pinia/nuxt", {
+      autoImports: ["defineStore", "acceptHMRUpdate"]
+    }
+  ], "@nuxt/image"],
   routeRules: {
     "/spa": { ssr: false },
     "/static": { static: true },
@@ -19,7 +16,6 @@ export default defineNuxtConfig({
   image: {
     domains: [
       "m.media-amazon.com",
-      "https://m.media-amazon.com",
     ]
   }
 })
