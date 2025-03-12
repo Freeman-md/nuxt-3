@@ -15,5 +15,11 @@ export default defineNuxtConfig({
     "/static": { static: true },
     "/swr": { swr: true },
     // no need to set for ssr as by default our site is universally rendered and serves everything from the server  
+  },
+  image: {
+    domains: [
+      "m.media-amazon.com",
+      "https://m.media-amazon.com",
+    ]
   }
 })
