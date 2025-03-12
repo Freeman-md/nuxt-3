@@ -11,6 +11,6 @@
 </template>
 
 <script setup>
-const isLoggedIn = useState("isLoggedIn", () => false)
+const isLoggedIn = useIsLoggedIn()
 
 </script>
