@@ -9,4 +9,10 @@ export default defineNuxtConfig({
       }
     ]
   ],
+  routeRules: {
+    "/spa": { ssr: false },
+    "/static": { static: true },
+    "/swr": { swr: true },
+    // no need to set for ssr as by default our site is universally rendered and serves everything from the server  
+  }
 })
