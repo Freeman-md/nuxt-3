@@ -5,7 +5,14 @@ export const useUser = defineStore('user', {
         }
     },
     getters: {},
-    actions: {},
+    actions: {
+        login() {
+            this.isLoggedIn = true
+            useRouter().push({
+                name: 'index'
+            })
+        }
+    },
 })
 
 if (import.meta.hot) {

@@ -1,5 +1,5 @@
 <template>
-    <form @submit.prevent="login">
+    <form @submit.prevent="user.login">
         <h1>Login</h1>
         <label>
             Username
@@ -19,11 +19,4 @@ const user = useUser()
 definePageMeta({
     layout: 'plain'
 })
-
-function login() {
-    user.isLoggedIn = true
-    useRouter().push({
-        name: 'index'
-    })
-}
 </script>
