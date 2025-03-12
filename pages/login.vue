@@ -21,7 +21,7 @@ definePageMeta({
 })
 
 function login() {
-    isLoggedIn.value = true
+    user.isLoggedIn = true
     useRouter().push({
         name: 'index'
     })
